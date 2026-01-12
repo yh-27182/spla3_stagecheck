@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spla3 Stage Check</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Spla3 Stage Check</h1>
+        <p>ステージ確認 & 勝率分析ツール</p>
+    </header>
+
+    <div class="container">
+        <section id="x-match" class="card x-match">
+            <h2>Xマッチ</h2>
+            <div id="x-match-content" class="content">読み込み中...</div>
+        </section>
+
+        <section id="bankara-open" class="card">
+            <h2>バンカラマッチ (オープン)</h2>
+            <div id="bankara-open-content" class="content">読み込み中...</div>
+        </section>
+
+        <section id="record" class="card">
+            <h2>対面勝率データ</h2>
+            <div class="content">
+                <div class="input-area">
+                    <p style="margin-top:0;">相手のブキを入力して記録</p>
+                    <input type="text" id="weapon-input" placeholder="ブキ名を入力 (例: ジムワイパー)" list="weapon-list">
+                    <datalist id="weapon-list"></datalist>
+                    
+                    <div class="buttons">
+                        <button onclick="addRecord(true)" class="btn win">勝ち</button>
+                        <button onclick="addRecord(false)" class="btn lose">負け</button>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="stats-container">
+                    <h3>ブキ別 勝率</h3>
+                    <div id="stats-list">データがありません</div>
+
+                    <h3>スペシャル別 勝率</h3>
+                    <div id="special-stats-list">データがありません</div>
+
+                    <h3>サブウェポン別 勝率</h3>
+                    <div id="sub-stats-list">データがありません</div>
+                </div>
+                
+                <button onclick="clearData()" style="font-size:0.8rem; color:#999; margin-top:20px; border:none; background:none; cursor:pointer;">データをリセット</button>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>Data provided by <a href="https://spla3.yuu26.com/" target="_blank">Spla3 API</a></p>
+    </footer>
+
+    <script src="weapons.js"></script> 
+    <script src="script.js"></script>
+</body>
+</html>

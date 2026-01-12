@@ -1,0 +1,70 @@
+body {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.card h2 {
+    background-color: #e91e63;
+    color: white;
+    margin: 0;
+    padding: 15px;
+    font-size: 1.2rem;
+}
+
+.card.x-match h2 {
+    background-color: #009688;
+}
+
+.content {
+    padding: 20px;
+}
+
+.schedule-item {
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+}
+
+.schedule-item:last-child {
+    border-bottom: none;
+}
+
+.time {
+    font-weight: bold;
+    color: #666;
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.stages {
+    font-size: 1.1rem;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+}
